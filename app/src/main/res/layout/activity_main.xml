@@ -11,8 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Iniciar Sesion"
-        android:background="@color/purple_500"
-        android:textColor="@android:color/white"
+        style="@style/Widget.AppCompat.Button.Colored"
         android:padding="8dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,25 +19,46 @@
         app:layout_constraintBottom_toBottomOf="parent"/>
 
 
-    <EditText
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etPassword"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
+        android:hint="Password"
+        app:helperText="Al menos 8 caracteres"
+        app:endIconMode="password_toggle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/btnLogin"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp">
 
-    <EditText
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/etName"
         android:layout_width="220dp"
         android:layout_height="wrap_content"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
+        android:hint="User Name"
+        app:helperText="user name or gmail"
+        app:endIconMode="clear_text"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/etPassword"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
 
 
     <TextView
